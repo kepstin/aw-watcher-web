@@ -53,10 +53,13 @@ function domListeners() {
     const url = chrome.runtime.getURL("../static/consent.html");
     chrome.windows.create({ url, type: "popup", height: 550, width: 416, });
   });
+  let settings_button = document.getElementById('settings-btn');
+  settings_button.addEventListener('click', () => {
+    chrome.runtime.openOptionsPage();
+  });
 }
 
 document.addEventListener('DOMContentLoaded', function() {
   renderStatus();
   domListeners();
 })
-

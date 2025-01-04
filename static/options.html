@@ -1,0 +1,22 @@
+<!DOCTYPE html>
+<html lang="en" xmlns="http://www.w3.org/1999/xhtml">
+  <head>
+    <meta charset="utf-8" />
+    <title>ActivityWatch settings</title>
+    <meta name="color-scheme" content="dark light" />
+    <style type="text/css">
+      input:invalid {
+        border-color: red;
+      }
+    </style>
+  </head>
+
+  <body>
+    <form>
+      <label for="hostname">Hostname</label>
+      <input type="text" id="hostname" name="hostname" pattern="[a-zA-Z0-9_.\-]*"/>
+      <button type="submit">Save</button>
+    </form>
+    <script src="./options.js"></script>
+  </body>
+</html>
